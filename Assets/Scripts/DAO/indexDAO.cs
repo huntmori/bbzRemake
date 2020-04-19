@@ -40,6 +40,8 @@ public class indexDAO : MonoBehaviour
     {
         Debug.Log(txtNewAccount.text);
         Debug.Log(txtNewPassword.text);
+
+        
     }
 
     IEnumerator coroutinLogin()
@@ -47,6 +49,15 @@ public class indexDAO : MonoBehaviour
         Debug.Log(txtAccount.text);
         Debug.Log(txtPassword.text);
 
-        yield return null;
+        WWWForm form = new WWWForm();
+        form.AddField("strAccountId", txtAccount.text);
+        form.AddField("strPassword", txtPassword.text);
+
+
+        WWW loginRequest = new WWW(serverUrl + loginUrl, form);
+
+        yield return loginRequest;
+
+        Debug.Log(loginRequest.text);
     }
 }
