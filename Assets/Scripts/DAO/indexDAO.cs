@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Networking;
+using API.VO;
 
 public class indexDAO : MonoBehaviour
 {
@@ -19,19 +21,19 @@ public class indexDAO : MonoBehaviour
 
     public string serverUrl;
 
-    public string loginUrl = "";
-    public string createAccountUrl = "";
+    public string loginUrl = "/account/login";
+    public string createAccountUrl = "/account/create";
 
     // Start is called before the first frame update
     void Start()
     {
-        serverUrl = "localhost:3000";
+        serverUrl = "localhost:8001";
     }
 
 
     public void btnLogin()
     {
-        StartCoroutine("coroutineLogin");
+        StartCoroutine("coroutinLogin");
         Debug.Log(txtAccount.text);
         Debug.Log(txtPassword.text);
     }
@@ -49,15 +51,26 @@ public class indexDAO : MonoBehaviour
         Debug.Log(txtAccount.text);
         Debug.Log(txtPassword.text);
 
-        WWWForm form = new WWWForm();
-        form.AddField("strAccountId", txtAccount.text);
-        form.AddField("strPassword", txtPassword.text);
+        LoginRequestVO param = new LoginRequestVO();
+        param.account_name = txtAccount.text;
+        param.password = txtPassword.text;
+        Debug.Log("before json:" + param);
+        Debug.Log("To Json String:"+JsonUtility.ToJson(param));
 
+        WWWForm formData = new WWWForm();
+        formData.AddField("account_name", param.account_name);
+        formData.AddField("password", param.password);
 
-        WWW loginRequest = new WWW(serverUrl + loginUrl, form);
+        //UnityWebRequest request = UnityWebRequest.Post(serverUrl + loginUrl, JsonUtility.ToJson(param));
+        Debug.Log("URL:" + serverUrl + loginUrl + "?account_name=" + param.account_name + "&password=" + param.password);
+        UnityWebRequest request = UnityWebRequest.Post(serverUrl +  "/account/login?account_name="+param.account_name+"&password="+param.password, "");
+        Debug.Log(request);
+        request.SetRequestHeader("Content-Type", "application/json");
 
-        yield return loginRequest;
+        //request.SendWebRequest();
+        yield return request.SendWebRequest();
 
-        Debug.Log(loginRequest.text);
+        Debug.Log("Status_code:" + request.responseCode);
+        
     }
 }
