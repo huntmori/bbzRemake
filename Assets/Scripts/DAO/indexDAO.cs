@@ -40,10 +40,10 @@ public class indexDAO : MonoBehaviour
 
     public void btnCreateAccount()
     {
+        StartCoroutine("coroutineCreate");
         Debug.Log(txtNewAccount.text);
         Debug.Log(txtNewPassword.text);
 
-        
     }
 
     IEnumerator coroutinLogin()
@@ -72,5 +72,33 @@ public class indexDAO : MonoBehaviour
 
         Debug.Log("Status_code:" + request.responseCode);
         
+    }
+
+    IEnumerator coroutineCreate()
+    {
+        Debug.Log(txtAccount.text);
+        Debug.Log(txtPassword.text);
+
+        LoginRequestVO param = new LoginRequestVO();
+        param.account_name = txtAccount.text;
+        param.password = txtPassword.text;
+        Debug.Log("before json:" + param);
+        Debug.Log("To Json String:" + JsonUtility.ToJson(param));
+
+        WWWForm formData = new WWWForm();
+        formData.AddField("account_name", param.account_name);
+        formData.AddField("password", param.password);
+
+        //UnityWebRequest request = UnityWebRequest.Post(serverUrl + loginUrl, JsonUtility.ToJson(param));
+        Debug.Log("URL:" + serverUrl + loginUrl + "?account_name=" + param.account_name + "&password=" + param.password);
+        UnityWebRequest request = UnityWebRequest.Post(serverUrl + "/account/create?account_name=" + param.account_name + "&password=" + param.password, "");
+        Debug.Log(request);
+        request.SetRequestHeader("Content-Type", "application/json");
+
+        //request.SendWebRequest();
+        yield return request.SendWebRequest();
+
+        Debug.Log("Status_code:" + request.responseCode);
+
     }
 }
