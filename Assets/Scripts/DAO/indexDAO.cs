@@ -15,6 +15,8 @@ public class indexDAO : MonoBehaviour
     public InputField txtNewAccount;
     public InputField txtNewPassword;
 
+    public Text txtMessage;
+
     public enum indexState { login = 1 , create=2 };
 
     public indexState state;
@@ -33,16 +35,41 @@ public class indexDAO : MonoBehaviour
 
     public void btnLogin()
     {
-        StartCoroutine("coroutinLogin");
-        Debug.Log(txtAccount.text);
-        Debug.Log(txtPassword.text);
+
+        if (txtAccount.text == "")
+        {
+            txtMessage.text = "계정명을 입력해 주세요.";
+            return;
+        }
+        if (txtPassword.text == "") 
+        {
+            txtMessage.text = "비밀번호를 입력해 주세요.";
+            return;
+        }
+        
+        else
+        {
+            StartCoroutine("coroutinLogin");
+        }
     }
 
     public void btnCreateAccount()
     {
-        StartCoroutine("coroutineCreate");
-        Debug.Log(txtNewAccount.text);
-        Debug.Log(txtNewPassword.text);
+        if (txtAccount.text == "")
+        {
+            txtMessage.text = "계정명을 입력해 주세요.";
+            return;
+        }
+        if (txtPassword.text == "")
+        {
+            txtMessage.text = "비밀번호를 입력해 주세요.";
+            return;
+        }
+        
+        else
+        {
+            StartCoroutine("coroutineCreate");
+        }
 
     }
 
@@ -71,6 +98,15 @@ public class indexDAO : MonoBehaviour
         yield return request.SendWebRequest();
 
         Debug.Log("Status_code:" + request.responseCode);
+
+        if (request.responseCode == 200)
+        {
+            txtMessage.text = "로그인에 성공하였습니다";
+        }
+        else
+        {
+            txtMessage.text = "로그인에 실패하였습니다";
+        }
         
     }
 
@@ -100,5 +136,13 @@ public class indexDAO : MonoBehaviour
 
         Debug.Log("Status_code:" + request.responseCode);
 
+        if(request.responseCode == 201)
+        {
+            txtMessage.text = "계정생성에 성공하였습니다.";
+        }
+        else
+        {
+            txtMessage.text = "계정생성에 실패하였습니다.";
+        }
     }
 }

@@ -1,2 +1,9 @@
 Temp/
 *.cache
+*.exe
+*.js
+*.wasm
+*.dll
+*.pdb
+*.bin
+*.bc
