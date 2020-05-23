@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\DAO\indexDAO.cs" />
+    <Compile Include="Assets\Scripts\Manager\ScenManager.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\VO\LoginRequestVO.cs" />
     <Compile Include="Assets\Tutorial_Info\Scripts\Readme.cs" />

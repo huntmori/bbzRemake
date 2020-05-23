@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/00000.index.unity
     guid: 7780fcbcf3c316d4aa75be82d56cf07a
+  - enabled: 1
+    path: Assets/Scenes/00001.Loby.unity
+    guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects: {}

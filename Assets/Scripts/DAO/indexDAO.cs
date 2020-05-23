@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 using API.VO;
+using UnityEngine.SceneManagement;
 
 public class indexDAO : MonoBehaviour
 {
@@ -29,7 +30,7 @@ public class indexDAO : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        serverUrl = "http://localhost:8080";
+        serverUrl = "http://49.175.158.186:58080";
     }
 
 
@@ -102,6 +103,7 @@ public class indexDAO : MonoBehaviour
         if (request.responseCode == 200)
         {
             txtMessage.text = "로그인에 성공하였습니다";
+            SceneManager.LoadScene("00001.Loby");            
         }
         else
         {
