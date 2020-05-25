@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 318405310}
   - component: {fileID: 318405309}
   m_Layer: 5
-  m_Name: btnTestMode (3)
+  m_Name: btnConfig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -252,7 +252,7 @@ GameObject:
   - component: {fileID: 362861943}
   - component: {fileID: 362861942}
   m_Layer: 5
-  m_Name: btnTestMode (2)
+  m_Name: btnNotAllocated
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -682,6 +682,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btnTestMode: {fileID: 787432830}
+  btnMatchStart: {fileID: 1273353624}
+  btnNotAllocated: {fileID: 362861942}
+  btnConfig: {fileID: 318405309}
 --- !u!4 &809466665
 Transform:
   m_ObjectHideFlags: 0
@@ -752,19 +755,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 12f48a7338928b3429aad18a29af6a6f, type: 3}
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 5
+    m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: '?'
 --- !u!222 &861522057
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -829,19 +832,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 12f48a7338928b3429aad18a29af6a6f, type: 3}
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 5
+    m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\uC124 \uC815"
 --- !u!222 &1027905643
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -863,7 +866,7 @@ GameObject:
   - component: {fileID: 1273353625}
   - component: {fileID: 1273353624}
   m_Layer: 5
-  m_Name: btnTestMode (1)
+  m_Name: btnMatchStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1024,19 +1027,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 12f48a7338928b3429aad18a29af6a6f, type: 3}
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 5
+    m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\uC5F0\uC2B5\uBAA8\uB4DC"
 --- !u!222 &1329792356
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1357,19 +1360,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 12f48a7338928b3429aad18a29af6a6f, type: 3}
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 5
+    m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\uB9E4\uCE6D\uC2DC\uC791"
 --- !u!222 &2114094161
 CanvasRenderer:
   m_ObjectHideFlags: 0

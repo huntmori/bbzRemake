@@ -1,7 +1,11 @@
 ScriptsOnlyBuild:
   usedScripts:
+    Assembly-CSharp-Editor.dll:
+    - ReadmeEditor
     Assembly-CSharp.dll:
+    - Readme
     - indexDAO
+    - lobyDAO
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.TestRunner.dll:
@@ -46,15 +50,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11858}
     - Class: 114
-      Script: {instanceID: 12284}
+      Script: {instanceID: 12286}
     - Class: 114
-      Script: {instanceID: 12484}
+      Script: {instanceID: 12486}
     - Class: 114
-      Script: {instanceID: 12716}
+      Script: {instanceID: 12718}
     - Class: 114
-      Script: {instanceID: 12808}
+      Script: {instanceID: 12810}
     - Class: 114
-      Script: {instanceID: 13184}
+      Script: {instanceID: 13188}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -93,14 +97,22 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11218}
     - Class: 114
+      Script: {instanceID: 11396}
+    - Class: 114
       Script: {instanceID: 11436}
     - Class: 114
       Script: {instanceID: 11858}
     - Class: 114
-      Script: {instanceID: 12808}
+      Script: {instanceID: 12286}
     - Class: 114
-      Script: {instanceID: 13184}
+      Script: {instanceID: 12810}
+    - Class: 114
+      Script: {instanceID: 13048}
+    - Class: 114
+      Script: {instanceID: 13188}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -365,6 +377,12 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ScenManager
+  - hash:
+      serializedVersion: 2
       Hash: 61b9d9b6f4b6a222dfea8b131b3d3227
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
@@ -545,6 +563,12 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
+      Hash: 9c027a73fa6b539f49ca4e54fc32e9f0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: lobyDAO
+  - hash:
+      serializedVersion: 2
       Hash: d5630f96bd5a6a6eed7e1754c3fb8703
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
@@ -657,14 +681,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ScenManager
   platform: 20
   scenePathNames:
   - Assets/Scenes/00000.index.unity
   - Assets/Scenes/00001.Loby.unity
-  playerPath: "C:/builds/\uC0C8 \uD3F4\uB354"
+  playerPath: C:/builds/20200526
