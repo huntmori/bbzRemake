@@ -30,7 +30,7 @@ public class indexDAO : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        serverUrl = "http://49.175.158.186:58080";
+        serverUrl = "http://15.164.165.253:53526";
     }
 
 
