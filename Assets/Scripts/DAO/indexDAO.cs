@@ -6,6 +6,7 @@ using UnityEngine.Networking;
 using API.VO;
 using UnityEngine.SceneManagement;
 
+
 public class indexDAO : MonoBehaviour
 {
     [Header("Login Panel")]
@@ -72,6 +73,64 @@ public class indexDAO : MonoBehaviour
             StartCoroutine("coroutineCreate");
         }
 
+    }
+
+    public void btnTest()
+    {
+        Debug.Log("btnTest clicked");
+        StartCoroutine("test");
+    }
+
+    IEnumerator test()
+    {
+        Debug.Log("coroutine test");
+        /*List<IMultipartFormSection> formData = new List<IMultipartFormSection>();
+        formData.Add(new MultipartFormDataSection("account_name=saddummy&password=1234"));
+
+        UnityWebRequest www = UnityWebRequest.Post(serverUrl + "/account/body_test", formData);
+
+        yield return www.SendWebRequest();
+
+        if(www.isNetworkError || www.isHttpError)
+        {
+            Debug.Log(www.error);
+        }
+        else
+        {
+            Debug.Log("form success :"+ www.responseCode+"\t");
+        }*/
+
+        LoginRequestVO param = new LoginRequestVO();
+        param.account_name = "saddummy";
+        param.password = "1234";
+        
+        Debug.Log(JsonUtility.ToJson(param));
+
+        WWWForm formData = new WWWForm();
+        formData.AddField("account_name", param.account_name);
+        formData.AddField("password", param.password);
+
+        //UnityWebRequest request = UnityWebRequest.Post(serverUrl + loginUrl, JsonUtility.ToJson(param));
+        
+        UnityWebRequest request = UnityWebRequest.Post(serverUrl + "/account/body_test", JsonUtility.ToJson(param));
+        Debug.Log(request);
+        request.SetRequestHeader("Content-Type", "application/json");
+        request.SetRequestHeader("Accept", "application/json");
+
+        //request.SendWebRequest();
+        yield return request.SendWebRequest();
+
+        Debug.Log("Status_code:" + request.responseCode);
+
+        if(request.isError || request.isHttpError || request.isNetworkError)
+        {
+            Debug.Log("error"+request.error);
+
+        }
+        else
+        {
+            Debug.Log("success");
+        }
     }
 
     IEnumerator coroutinLogin()
