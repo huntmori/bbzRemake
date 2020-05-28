@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class lobyDAO : MonoBehaviour
@@ -24,5 +25,10 @@ public class lobyDAO : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void eventTestMode()
+    {
+        SceneManager.LoadScene("00002.practice");
     }
 }

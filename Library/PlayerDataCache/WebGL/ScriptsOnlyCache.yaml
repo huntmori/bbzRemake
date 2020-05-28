@@ -1,9 +1,6 @@
 ScriptsOnlyBuild:
   usedScripts:
-    Assembly-CSharp-Editor.dll:
-    - ReadmeEditor
     Assembly-CSharp.dll:
-    - Readme
     - indexDAO
     - lobyDAO
     Unity.Rider.Editor.dll:
@@ -42,23 +39,23 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11218}
+      Script: {instanceID: 11220}
     - Class: 114
-      Script: {instanceID: 11396}
+      Script: {instanceID: 11398}
     - Class: 114
-      Script: {instanceID: 11436}
+      Script: {instanceID: 11438}
     - Class: 114
-      Script: {instanceID: 11858}
+      Script: {instanceID: 11860}
     - Class: 114
-      Script: {instanceID: 12286}
+      Script: {instanceID: 12288}
     - Class: 114
-      Script: {instanceID: 12486}
+      Script: {instanceID: 12488}
     - Class: 114
-      Script: {instanceID: 12718}
+      Script: {instanceID: 12720}
     - Class: 114
-      Script: {instanceID: 12810}
+      Script: {instanceID: 12812}
     - Class: 114
-      Script: {instanceID: 13188}
+      Script: {instanceID: 13190}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -95,21 +92,21 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11218}
+      Script: {instanceID: 11220}
     - Class: 114
-      Script: {instanceID: 11396}
+      Script: {instanceID: 11398}
     - Class: 114
-      Script: {instanceID: 11436}
+      Script: {instanceID: 11438}
     - Class: 114
-      Script: {instanceID: 11858}
+      Script: {instanceID: 11860}
     - Class: 114
-      Script: {instanceID: 12286}
+      Script: {instanceID: 12288}
     - Class: 114
-      Script: {instanceID: 12810}
+      Script: {instanceID: 12812}
     - Class: 114
-      Script: {instanceID: 13048}
+      Script: {instanceID: 13050}
     - Class: 114
-      Script: {instanceID: 13188}
+      Script: {instanceID: 13190}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -127,6 +124,39 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
     - Class: 258
+      Script: {instanceID: 0}
+    Assets/Scenes/00002.practice.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -685,4 +715,5 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/00000.index.unity
   - Assets/Scenes/00001.Loby.unity
-  playerPath: C:/builds/20200526
+  - Assets/Scenes/00002.practice.unity
+  playerPath: C:/builds/20200527
