@@ -110,12 +110,16 @@ public class indexDAO : MonoBehaviour
         formData.AddField("account_name", param.account_name);
         formData.AddField("password", param.password);
 
-        //UnityWebRequest request = UnityWebRequest.Post(serverUrl + loginUrl, JsonUtility.ToJson(param));
-        
-        UnityWebRequest request = UnityWebRequest.Post(serverUrl + "/account/body_test", JsonUtility.ToJson(param));
-        Debug.Log(request);
+        UnityWebRequest request = UnityWebRequest.Post(serverUrl + "/account/body_test", "POST");
+        //UnityWebRequest request = UnityWebRequest.Post(serverUrl + oginUrl, JsonUtility.ToJson(param));
+        byte[] jsonToSend = new System.Text.UTF8Encoding().GetBytes(JsonUtility.ToJson(param));
+        request.uploadHandler = (UploadHandler)new UploadHandlerRaw(jsonToSend);
+        request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
         request.SetRequestHeader("Content-Type", "application/json");
-        request.SetRequestHeader("Accept", "application/json");
+        
+
+        Debug.Log(request);
+        
 
         //request.SendWebRequest();
         yield return request.SendWebRequest();
@@ -130,6 +134,7 @@ public class indexDAO : MonoBehaviour
         else
         {
             Debug.Log("success");
+            Debug.Log(request.downloadHandler.text);
         }
     }
 
