@@ -103,23 +103,9 @@ public class indexDAO : MonoBehaviour
         LoginRequestVO param = new LoginRequestVO();
         param.account_name = "saddummy";
         param.password = "1234";
-        
-        Debug.Log(JsonUtility.ToJson(param));
 
-        WWWForm formData = new WWWForm();
-        formData.AddField("account_name", param.account_name);
-        formData.AddField("password", param.password);
-
-        UnityWebRequest request = UnityWebRequest.Post(serverUrl + "/account/body_test", "POST");
-        //UnityWebRequest request = UnityWebRequest.Post(serverUrl + oginUrl, JsonUtility.ToJson(param));
-        byte[] jsonToSend = new System.Text.UTF8Encoding().GetBytes(JsonUtility.ToJson(param));
-        request.uploadHandler = (UploadHandler)new UploadHandlerRaw(jsonToSend);
-        request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
-        request.SetRequestHeader("Content-Type", "application/json");
-        
-
-        Debug.Log(request);
-        
+        Util.JsonWebRequest wrapper = new Util.JsonWebRequest(serverUrl + "/account/body_test/", "POST", param);
+        UnityWebRequest request = wrapper.req;
 
         //request.SendWebRequest();
         yield return request.SendWebRequest();
@@ -203,6 +189,47 @@ public class indexDAO : MonoBehaviour
         Debug.Log("Status_code:" + request.responseCode);
 
         if(request.responseCode == 201)
+        {
+            txtMessage.text = "계정생성에 성공하였습니다.";
+        }
+        else
+        {
+            txtMessage.text = "계정생성에 실패하였습니다.";
+        }
+    }
+
+    public void btnTest2()
+    {
+        StartCoroutine("coroutineCreateByMapper");
+    }
+
+    IEnumerator coroutineCreateByMapper()
+    {
+        Debug.Log(txtAccount.text);
+        Debug.Log(txtPassword.text);
+
+        LoginRequestVO param = new LoginRequestVO();
+        param.account_name = txtAccount.text;
+        param.password = txtPassword.text;
+        Debug.Log("before json:" + param);
+        Debug.Log("To Json String:" + JsonUtility.ToJson(param));
+
+        WWWForm formData = new WWWForm();
+        formData.AddField("account_name", param.account_name);
+        formData.AddField("password", param.password);
+
+        //UnityWebRequest request = UnityWebRequest.Post(serverUrl + loginUrl, JsonUtility.ToJson(param));
+        Debug.Log("URL:" + serverUrl + loginUrl + "?account_name=" + param.account_name + "&password=" + param.password);
+        UnityWebRequest request = UnityWebRequest.Post(serverUrl + "/account/create?account_name=" + param.account_name + "&password=" + param.password, "");
+        Debug.Log(request);
+        request.SetRequestHeader("Content-Type", "application/json");
+
+        //request.SendWebRequest();
+        yield return request.SendWebRequest();
+
+        Debug.Log("Status_code:" + request.responseCode);
+
+        if (request.responseCode == 201)
         {
             txtMessage.text = "계정생성에 성공하였습니다.";
         }
