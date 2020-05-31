@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - StalkerCamera
     - indexDAO
     - lobyDAO
     Unity.Rider.Editor.dll:
@@ -153,6 +154,10 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 22908}
+    - Class: 115
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -711,9 +716,15 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: aa32faafc060a90cd4ddcc6f97a58abc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StalkerCamera
   platform: 20
   scenePathNames:
   - Assets/Scenes/00000.index.unity
   - Assets/Scenes/00001.Loby.unity
   - Assets/Scenes/00002.practice.unity
-  playerPath: C:/builds/20200527
+  playerPath: C:/builds/20200601

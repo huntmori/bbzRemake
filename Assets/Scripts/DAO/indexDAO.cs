@@ -31,8 +31,8 @@ public class indexDAO : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //serverUrl = "https://bbzclient.run.goorm.io";
-        serverUrl = "http://localhost:8080";
+        serverUrl = "https://bbzclient.run.goorm.io";
+        //serverUrl = "http://localhost:8080";
     }
 
 
@@ -84,7 +84,6 @@ public class indexDAO : MonoBehaviour
 
     IEnumerator test()
     {
-        Debug.Log("coroutine test");
         /*List<IMultipartFormSection> formData = new List<IMultipartFormSection>();
         formData.Add(new MultipartFormDataSection("account_name=saddummy&password=1234"));
 
@@ -111,24 +110,24 @@ public class indexDAO : MonoBehaviour
         //request.SendWebRequest();
         yield return request.SendWebRequest();
 
-        Debug.Log("Status_code:" + request.responseCode);
+        //Debug.Log("Status_code:" + request.responseCode);
 
-        if(request.isError || request.isHttpError || request.isNetworkError)
+        if( request.isHttpError || request.isNetworkError)
         {
-            Debug.Log("error"+request.error);
+            //Debug.Log("error"+request.error);
 
         }
         else
         {
-            Debug.Log("success");
-            Debug.Log(request.downloadHandler.text);
+            //Debug.Log("success");
+            //Debug.Log(request.downloadHandler.text);
         }
     }
 
     IEnumerator coroutinLogin()
     {
-        Debug.Log(txtAccount.text);
-        Debug.Log(txtPassword.text);
+        //Debug.Log(txtAccount.text);
+        //Debug.Log(txtPassword.text);
 
         LoginRequestVO param = new LoginRequestVO();
         param.account_name = txtAccount.text;
@@ -140,7 +139,7 @@ public class indexDAO : MonoBehaviour
         //request.SendWebRequest();
         yield return request.SendWebRequest();
 
-        Debug.Log("Status_code:" + request.responseCode);
+//        Debug.Log("Status_code:" + request.responseCode);
 
         if (request.responseCode == 200)
         {
@@ -156,29 +155,19 @@ public class indexDAO : MonoBehaviour
 
     IEnumerator coroutineCreate()
     {
-        Debug.Log(txtAccount.text);
-        Debug.Log(txtPassword.text);
+        //Debug.Log(txtAccount.text);
+        //Debug.Log(txtPassword.text);
 
         LoginRequestVO param = new LoginRequestVO();
         param.account_name = txtAccount.text;
         param.password = txtPassword.text;
-        Debug.Log("before json:" + param);
-        Debug.Log("To Json String:" + JsonUtility.ToJson(param));
 
-        WWWForm formData = new WWWForm();
-        formData.AddField("account_name", param.account_name);
-        formData.AddField("password", param.password);
-
-        //UnityWebRequest request = UnityWebRequest.Post(serverUrl + loginUrl, JsonUtility.ToJson(param));
-        Debug.Log("URL:" + serverUrl + loginUrl + "?account_name=" + param.account_name + "&password=" + param.password);
-        UnityWebRequest request = UnityWebRequest.Post(serverUrl + "/account/create?account_name=" + param.account_name + "&password=" + param.password, "");
-        Debug.Log(request);
-        request.SetRequestHeader("Content-Type", "application/json");
-
+        Util.JsonWebRequest wrapper = new Util.JsonWebRequest(serverUrl + "/account/create/", "POST", param);
+        UnityWebRequest request = wrapper.req;
         //request.SendWebRequest();
         yield return request.SendWebRequest();
 
-        Debug.Log("Status_code:" + request.responseCode);
+        //Debug.Log("Status_code:" + request.responseCode);
 
         if(request.responseCode == 201)
         {
