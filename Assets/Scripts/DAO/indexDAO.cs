@@ -31,7 +31,8 @@ public class indexDAO : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        serverUrl = "https://bbzclient.run.goorm.io";
+        //serverUrl = "https://bbzclient.run.goorm.io";
+        serverUrl = "http://localhost:8080";
     }
 
 
@@ -132,19 +133,10 @@ public class indexDAO : MonoBehaviour
         LoginRequestVO param = new LoginRequestVO();
         param.account_name = txtAccount.text;
         param.password = txtPassword.text;
-        Debug.Log("before json:" + param);
-        Debug.Log("To Json String:"+JsonUtility.ToJson(param));
 
-        WWWForm formData = new WWWForm();
-        formData.AddField("account_name", param.account_name);
-        formData.AddField("password", param.password);
 
-        //UnityWebRequest request = UnityWebRequest.Post(serverUrl + loginUrl, JsonUtility.ToJson(param));
-        Debug.Log("URL:" + serverUrl + loginUrl + "?account_name=" + param.account_name + "&password=" + param.password);
-        UnityWebRequest request = UnityWebRequest.Post(serverUrl +  "/account/login?account_name="+param.account_name+"&password="+param.password, "");
-        Debug.Log(request);
-        request.SetRequestHeader("Content-Type", "application/json");
-
+        Util.JsonWebRequest wrapper = new Util.JsonWebRequest(serverUrl + "/account/login/", "POST", param);
+        UnityWebRequest request = wrapper.req;
         //request.SendWebRequest();
         yield return request.SendWebRequest();
 
