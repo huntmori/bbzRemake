@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\DAO\lobyDAO.cs" />
     <Compile Include="Assets\Scripts\Manager\ScenManager.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\Scripts\System\ControllSystem\WASDMovement.cs" />
     <Compile Include="Assets\Scripts\System\Receiver\ClickReceiver.cs" />
     <Compile Include="Assets\Scripts\System\StatSystem\CharacterStat.cs" />
     <Compile Include="Assets\Scripts\System\StatSystem\I_StatOperatable.cs" />
