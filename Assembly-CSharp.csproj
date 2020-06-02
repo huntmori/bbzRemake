@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Model\Knight\scripts\rotator.cs" />
     <Compile Include="Assets\Scripts\DAO\indexDAO.cs" />
     <Compile Include="Assets\Scripts\DAO\lobyDAO.cs" />
     <Compile Include="Assets\Scripts\Manager\ScenManager.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Assets\Scripts\Utils\JsonWebRequest.cs" />
     <Compile Include="Assets\Scripts\VO\LoginRequestVO.cs" />
     <Compile Include="Assets\Tutorial_Info\Scripts\Readme.cs" />
+    <None Include="Assets\Model\Knight\shaders\doublesidedshader.shader" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/DevSrc/bbzRemake/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
