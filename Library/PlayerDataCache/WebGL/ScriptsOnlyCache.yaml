@@ -2,8 +2,10 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - StalkerCamera
+    - WASDMovement
     - indexDAO
     - lobyDAO
+    - rotator
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.TestRunner.dll:
@@ -40,23 +42,23 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11220}
+      Script: {instanceID: 11218}
     - Class: 114
-      Script: {instanceID: 11398}
+      Script: {instanceID: 11400}
     - Class: 114
-      Script: {instanceID: 11438}
+      Script: {instanceID: 11440}
     - Class: 114
-      Script: {instanceID: 11860}
+      Script: {instanceID: 11862}
     - Class: 114
-      Script: {instanceID: 12288}
+      Script: {instanceID: 12294}
     - Class: 114
-      Script: {instanceID: 12488}
+      Script: {instanceID: 12496}
     - Class: 114
-      Script: {instanceID: 12720}
+      Script: {instanceID: 12730}
     - Class: 114
-      Script: {instanceID: 12812}
+      Script: {instanceID: 12822}
     - Class: 114
-      Script: {instanceID: 13190}
+      Script: {instanceID: 13200}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -93,21 +95,21 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11220}
+      Script: {instanceID: 11218}
     - Class: 114
-      Script: {instanceID: 11398}
+      Script: {instanceID: 11400}
     - Class: 114
-      Script: {instanceID: 11438}
+      Script: {instanceID: 11440}
     - Class: 114
-      Script: {instanceID: 11860}
+      Script: {instanceID: 11862}
     - Class: 114
-      Script: {instanceID: 12288}
+      Script: {instanceID: 12294}
     - Class: 114
-      Script: {instanceID: 12812}
+      Script: {instanceID: 12822}
     - Class: 114
-      Script: {instanceID: 13050}
+      Script: {instanceID: 13060}
     - Class: 114
-      Script: {instanceID: 13190}
+      Script: {instanceID: 13200}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -145,19 +147,35 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 90
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 22908}
+      Script: {instanceID: 12096}
+    - Class: 114
+      Script: {instanceID: 14676}
+    - Class: 114
+      Script: {instanceID: 21400}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 135
+      Script: {instanceID: 0}
+    - Class: 137
+      Script: {instanceID: 0}
+    - Class: 143
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -434,6 +452,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: ScrollRect
+  - hash:
+      serializedVersion: 2
+      Hash: bb66955fd81cf7198b757e40bcae1387
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StalkerCamera
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -718,13 +742,19 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: aa32faafc060a90cd4ddcc6f97a58abc
+      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: StalkerCamera
+    className: WASDMovement
+  - hash:
+      serializedVersion: 2
+      Hash: c1db7bb9821e3902b6711af6fd6c2232
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: rotator
   platform: 20
   scenePathNames:
   - Assets/Scenes/00000.index.unity
   - Assets/Scenes/00001.Loby.unity
   - Assets/Scenes/00002.practice.unity
-  playerPath: C:/builds/20200601
+  playerPath: C:/builds/20200603
