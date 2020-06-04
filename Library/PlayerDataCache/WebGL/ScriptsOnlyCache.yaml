@@ -1,7 +1,6 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - StalkerCamera
     - WASDMovement
     - indexDAO
     - lobyDAO
@@ -42,23 +41,23 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11218}
+      Script: {instanceID: 11220}
     - Class: 114
-      Script: {instanceID: 11400}
+      Script: {instanceID: 11406}
     - Class: 114
-      Script: {instanceID: 11440}
+      Script: {instanceID: 11446}
     - Class: 114
-      Script: {instanceID: 11862}
+      Script: {instanceID: 11868}
     - Class: 114
-      Script: {instanceID: 12294}
+      Script: {instanceID: 12300}
     - Class: 114
-      Script: {instanceID: 12496}
+      Script: {instanceID: 12502}
     - Class: 114
-      Script: {instanceID: 12730}
+      Script: {instanceID: 12736}
     - Class: 114
-      Script: {instanceID: 12822}
+      Script: {instanceID: 12828}
     - Class: 114
-      Script: {instanceID: 13200}
+      Script: {instanceID: 13206}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -95,21 +94,21 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11218}
+      Script: {instanceID: 11220}
     - Class: 114
-      Script: {instanceID: 11400}
+      Script: {instanceID: 11406}
     - Class: 114
-      Script: {instanceID: 11440}
+      Script: {instanceID: 11446}
     - Class: 114
-      Script: {instanceID: 11862}
+      Script: {instanceID: 11868}
     - Class: 114
-      Script: {instanceID: 12294}
+      Script: {instanceID: 12300}
     - Class: 114
-      Script: {instanceID: 12822}
+      Script: {instanceID: 12828}
     - Class: 114
-      Script: {instanceID: 13060}
+      Script: {instanceID: 13066}
     - Class: 114
-      Script: {instanceID: 13200}
+      Script: {instanceID: 13206}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -164,11 +163,9 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 12096}
+      Script: {instanceID: 11296}
     - Class: 114
-      Script: {instanceID: 14676}
-    - Class: 114
-      Script: {instanceID: 21400}
+      Script: {instanceID: 11356}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 135
@@ -226,6 +223,12 @@ ScriptsOnlyBuild:
     className: TMP_Dropdown
   - hash:
       serializedVersion: 2
+      Hash: 3119f7748c4351c9ae8fd6833def56d0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WASDMovement
+  - hash:
+      serializedVersion: 2
       Hash: 71f7f12b8d0f4fd73590db8bcb6d453c
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
@@ -242,6 +245,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
     className: MotionBlur
+  - hash:
+      serializedVersion: 2
+      Hash: c1db7bb9821e3902b6711af6fd6c2232
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: rotator
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -740,21 +749,9 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: WASDMovement
-  - hash:
-      serializedVersion: 2
-      Hash: c1db7bb9821e3902b6711af6fd6c2232
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: rotator
   platform: 20
   scenePathNames:
   - Assets/Scenes/00000.index.unity
   - Assets/Scenes/00001.Loby.unity
   - Assets/Scenes/00002.practice.unity
-  playerPath: C:/builds/20200603
+  playerPath: C:/builds/20200604
