@@ -1,53 +1,68 @@
 ﻿using UnityEngine;
 
 using System.Collections;
-
-
+using System.Windows.Input;
 
 public class WASDMovement : MonoBehaviour
 {
-    public float move_speed;
-    public float rotation_speed;
+    public float speed = 10f;
+    public float jump_power = 5f;
+    public float rotation_speed = 3f;
 
-    public Camera fpsCam;
+    Rigidbody rigidbody;
+    Vector3 movement;
 
-    private void Start()
+    float horizontal_move;
+    float vertical_move;
+    
+    bool is_jumping;
+
+    public Camera cam;
+    private void Awake()
     {
-        
+        rigidbody = GetComponent<Rigidbody>();
     }
-
     private void Update()
     {
-        MoveControll();
-        RotationControll();
-    }
+        horizontal_move = Input.GetAxisRaw("Horizontal");
+        vertical_move = Input.GetAxisRaw("Vertical");
 
-    void MoveControll()
+        if (Input.GetButtonDown("Jump"))
+        {
+            is_jumping = true;
+        }
+    }
+    private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.W))
-        {
-            this.transform.Translate(Vector3.forward * move_speed * Time.deltaTime);
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            this.transform.Translate(Vector3.back * move_speed * Time.deltaTime);
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            this.transform.Translate(Vector3.left * move_speed * Time.deltaTime);
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            this.transform.Translate(Vector3.right * move_speed * Time.deltaTime);
-        }
+        Run();
+        Jump();
+        Rotation();
     }
 
-    void RotationControll()
+    void Jump()
+    {
+        if (!is_jumping)
+            return;
+
+        rigidbody.AddForce(Vector3.up * jump_power,
+                            ForceMode.Impulse);
+
+        is_jumping = false;
+    }
+    void Run()
+    {
+        movement.Set(horizontal_move, 0, vertical_move);
+        movement = movement.normalized * speed * Time.deltaTime;
+
+        rigidbody.MovePosition(transform.position + movement);
+    }
+
+    void Rotation()
     {
         float rotation_x = Input.GetAxis("Mouse Y") * rotation_speed;
         float rotation_y = Input.GetAxis("Mouse X") * rotation_speed;
 
         this.transform.localRotation *= Quaternion.Euler(0, rotation_y, 0);
-        fpsCam.transform.localRotation *= Quaternion.Euler(-rotation_x, 0, 0);
+        cam.transform.localRotation *= Quaternion.Euler(-rotation_x, 0, 0);
     }
 }
