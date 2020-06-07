@@ -6,8 +6,10 @@ using UnityEngine;
 
 public class CommandFire : CommandObject
 {
-    public void Execute()
-    {
+ 
 
+    void CommandObject.Execute(CommandActor actor)
+    {
+        Debug.Log("REAL FIRE");
     }
 }

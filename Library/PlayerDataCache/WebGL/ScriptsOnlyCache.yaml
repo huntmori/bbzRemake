@@ -49,15 +49,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11868}
     - Class: 114
-      Script: {instanceID: 12300}
+      Script: {instanceID: 12302}
     - Class: 114
-      Script: {instanceID: 12502}
+      Script: {instanceID: 12504}
     - Class: 114
-      Script: {instanceID: 12736}
+      Script: {instanceID: 12740}
     - Class: 114
-      Script: {instanceID: 12828}
+      Script: {instanceID: 12832}
     - Class: 114
-      Script: {instanceID: 13206}
+      Script: {instanceID: 13216}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -102,13 +102,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11868}
     - Class: 114
-      Script: {instanceID: 12300}
+      Script: {instanceID: 12302}
     - Class: 114
-      Script: {instanceID: 12828}
+      Script: {instanceID: 12832}
     - Class: 114
-      Script: {instanceID: 13066}
+      Script: {instanceID: 13074}
     - Class: 114
-      Script: {instanceID: 13206}
+      Script: {instanceID: 13216}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -223,7 +223,7 @@ ScriptsOnlyBuild:
     className: TMP_Dropdown
   - hash:
       serializedVersion: 2
-      Hash: 3119f7748c4351c9ae8fd6833def56d0
+      Hash: a667a9ada9bf32ff6b0e0b1111d5b16d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: WASDMovement
@@ -583,6 +583,12 @@ ScriptsOnlyBuild:
     className: SimpleCameraController
   - hash:
       serializedVersion: 2
+      Hash: 4f6dfc316df24ff7ed7a51d54dd6fb1d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TargettingManager
+  - hash:
+      serializedVersion: 2
       Hash: 58e68364412c67eae2bdb4954be2dcc2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -685,6 +691,12 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
+      Hash: 534f36bab4ff7d026855b32a6fb73d1d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MovementManager
+  - hash:
+      serializedVersion: 2
       Hash: a63fc1a3b035e5a0b5839cd7f7b3086e
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -754,4 +766,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/00000.index.unity
   - Assets/Scenes/00001.Loby.unity
   - Assets/Scenes/00002.practice.unity
-  playerPath: C:/builds/20200604
+  playerPath: C:/builds/20200607

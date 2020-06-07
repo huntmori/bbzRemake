@@ -5,5 +5,5 @@ using UnityEngine;
 
 public interface CommandObject
 {
-    void Execute();
+    void Execute(CommandActor actor);
 }

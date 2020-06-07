@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\System\CommandSystem\Command.cs" />
     <Compile Include="Assets\Scripts\System\CommandSystem\CommandActor.cs" />
+    <Compile Include="Assets\Scripts\System\CommandSystem\CommandController.cs" />
     <Compile Include="Assets\Scripts\System\CommandSystem\CommandFire.cs" />
     <Compile Include="Assets\Scripts\System\ControllSystem\MovementManager.cs" />
     <Compile Include="Assets\Scripts\System\ControllSystem\TargettingManager.cs" />
