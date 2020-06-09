@@ -6,10 +6,9 @@ using UnityEngine;
 
 public class CommandFire : CommandObject
 {
- 
-
+    
     void CommandObject.Execute(CommandActor actor)
     {
-        Debug.Log("REAL FIRE");
+        Debug.Log("REAL FIRE from overrided method");
     }
 }
