@@ -9,6 +9,6 @@ public class CommandFire : CommandObject
     
     void CommandObject.Execute(CommandActor actor)
     {
-        Debug.Log("REAL FIRE from overrided method");
+        actor.Attack();
     }
 }

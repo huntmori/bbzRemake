@@ -18,7 +18,10 @@ public class CommandActor
     {
         Debug.Log("Evade");
     }
-
+    public void Reload()
+    {
+        Debug.Log("Reload");
+    }
     public void Skill01()
     {
         Debug.Log("Skill01");

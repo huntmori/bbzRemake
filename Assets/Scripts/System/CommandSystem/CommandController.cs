@@ -20,9 +20,9 @@ public class CommandController : MonoBehaviour
     void SetCommand()
     {
         fire = new CommandFire();
-        jump = new CommandFire();
-        reload = new CommandFire();
-        evade = new CommandFire();
+        jump = new CommandJump();
+        reload = new CommandReload();
+        evade = new CommandEvade();
     }
 
     // Update is called once per frame

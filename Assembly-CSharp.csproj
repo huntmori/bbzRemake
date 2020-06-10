@@ -71,7 +71,10 @@
     <Compile Include="Assets\Scripts\System\CommandSystem\Command.cs" />
     <Compile Include="Assets\Scripts\System\CommandSystem\CommandActor.cs" />
     <Compile Include="Assets\Scripts\System\CommandSystem\CommandController.cs" />
+    <Compile Include="Assets\Scripts\System\CommandSystem\CommandEvade.cs" />
     <Compile Include="Assets\Scripts\System\CommandSystem\CommandFire.cs" />
+    <Compile Include="Assets\Scripts\System\CommandSystem\CommandJump.cs" />
+    <Compile Include="Assets\Scripts\System\CommandSystem\CommandReload.cs" />
     <Compile Include="Assets\Scripts\System\ControllSystem\MovementManager.cs" />
     <Compile Include="Assets\Scripts\System\ControllSystem\TargettingManager.cs" />
     <Compile Include="Assets\Scripts\System\ControllSystem\WASDMovement.cs" />
