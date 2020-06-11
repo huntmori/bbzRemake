@@ -28,11 +28,31 @@ public class CommandController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        CommandObject command = GetCommand();
+        if (command != null)
+        {
+            command.Execute(actor);
+        }
     }
 
     CommandObject GetCommand()
     {
+        if (IsPressed(eButton.BUTTON_EVADE))
+        {
+            return evade;
+        }
+        else if (IsPressed(eButton.BUTTON_FIRE))
+        {
+            return fire;
+        }
+        else if (IsPressed(eButton.BUTTON_JUMP))
+        {
+            return jump;
+        }
+        else if (IsPressed(eButton.BUTTON_RELOAD))
+        {
+            return reload;
+        }
         return null;
     }
 
