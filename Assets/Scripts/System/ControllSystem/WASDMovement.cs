@@ -22,6 +22,10 @@ public class WASDMovement : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody>();
     }
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
     private void Update()
     {
         horizontal_move = Input.GetAxisRaw("Horizontal");
