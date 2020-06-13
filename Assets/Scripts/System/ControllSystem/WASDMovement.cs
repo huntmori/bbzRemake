@@ -9,6 +9,11 @@ public class WASDMovement : MonoBehaviour
     public float jump_power = 5f;
     public float rotation_speed = 3f;
 
+    public float player_x_rotation_value;
+    public float player_y_rotation_value;
+
+
+
     Rigidbody rigidbody;
     Vector3 movement;
 
@@ -55,10 +60,12 @@ public class WASDMovement : MonoBehaviour
     }
     void Run()
     {
-        movement.Set(horizontal_move, 0, vertical_move);
-        movement = movement.normalized * speed * Time.deltaTime;
+        //movement.Set(horizontal_move, 0, vertical_move);
+        //movement = movement.normalized * speed * Time.deltaTime;
 
-        rigidbody.MovePosition(transform.position + movement);
+        //rigidbody.MovePosition(transform.position + movement);
+        Vector3 moveDirection = new Vector3(horizontal_move, 0, vertical_move);
+        this.rigidbody.AddForce(moveDirection * speed);
     }
 
     void Rotation()

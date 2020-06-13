@@ -8,7 +8,7 @@ public class CommandController : MonoBehaviour
 
     eButton pressed_button = eButton.BUTTON_NONE;
 
-    CommandObject fire, jump, reload, evade;
+    CommandObject fire, jump, reload, evade, skill1, skill2, skill3, skill4;
     CommandActor actor;
     // Start is called before the first frame update
     void Start()
