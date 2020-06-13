@@ -8,17 +8,23 @@ using UnityEngine;
 
 public class StalkerCamera : MonoBehaviour
 {
-    public Transform Target;
-    public float distance = 10f;
-    public float height = 3f;
-    public float dampTrace = 20f;
+    public Transform target_transform;
+    public float distance = 7.0f;
+    public float height = 2.0f;
+    public float damp_trace = 20.0f;
+
+    private Transform _transform;
+
+    public void Start()
+    {
+        _transform = GetComponent<Transform>();
+    }
 
     private void LateUpdate()
     {
-        transform.position = Vector3.Lerp(
-                                transform.position,
-                                Target.position - (Target.forward * distance) + (Vector3.up * height),
-                                Time.deltaTime * dampTrace);
-        transform.LookAt(Target.position);
+        _transform.position = Vector3.Lerp( _transform.position,
+                                            target_transform.position - (target_transform.forward * distance),
+                                            Time.deltaTime * damp_trace);
+        _transform.LookAt(target_transform.position);
     }
 }

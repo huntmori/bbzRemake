@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\System\CommandSystem\CommandJump.cs" />
     <Compile Include="Assets\Scripts\System\CommandSystem\CommandReload.cs" />
     <Compile Include="Assets\Scripts\System\ControllSystem\MovementManager.cs" />
+    <Compile Include="Assets\Scripts\System\ControllSystem\PlayerControll.cs" />
     <Compile Include="Assets\Scripts\System\ControllSystem\TargettingManager.cs" />
     <Compile Include="Assets\Scripts\System\ControllSystem\WASDMovement.cs" />
     <Compile Include="Assets\Scripts\System\Global_Interface\Interface_GenericIndexer.cs" />
